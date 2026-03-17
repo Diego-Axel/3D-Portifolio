@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 #1e293b;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #818cf8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+canvas {
+  display: block;
+}
+
+/* Transições suaves para links e botões */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Comportamento de scroll para as seções */
+section {
+  scroll-behavior: smooth;
+}
+
+/* Definições de animações customizadas */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.6s ease-out;
+}
+
+/* Efeito de brilho (glow) pulsante */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.8);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
